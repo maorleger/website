@@ -16,15 +16,12 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <meta name="google-site-verification" content="2uaaypew1Ve2cfPUULTHY_8yHtUlgx7xS98AdbcIc1g"/>
   <!-- build:css(.tmp) styles/main.css -->
-  <link rel="stylesheet" href="styles/bootstrap.css">
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/angular-grid/ng-grid.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+
   <!-- endbuild -->
 
-  <style type="text/css">
-    .row {
-      margin-left: 0;
-    }
-  </style>
 
 
   <script>
@@ -58,12 +55,12 @@
 <script src="bower_components/json3/lib/json3.min.js"></script>
 <![endif]-->
 
-<!-- Add your site or application content here -->
+
 <header></header>
 
 <!-- main content -->
-<div style="position:relative">
-  <div style="width:100%" ui-view ng-animate="{enter: 'view-enter', leave: 'view-leave'}"></div>
+<div class="container" style="position:relative">
+<div style="width:100%" ui-view ng-animate="{enter: 'view-enter', leave: 'view-leave'}"></div>
 </div>
 
 
@@ -92,6 +89,7 @@
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/angular-grid/ng-grid-2.0.7.min.js"></script>
 <!-- endbuild -->
 
 
@@ -111,6 +109,9 @@
 
 <script src="scripts/controllers/Resume.js"></script>
 <script src="scripts/directives/pdf.js"></script>
+<script src="scripts/controllers/Grid.js"></script>
+<script src="scripts/services/dataSets.js"></script>
+<script src="scripts/directives/ngGrid.js"></script>
 <!-- endbuild -->
 </body>
 </html>

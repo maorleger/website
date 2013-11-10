@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('websiteApp', ['ui.bootstrap', 'ui.router'])
+var app = angular.module('websiteApp', ['ui.bootstrap', 'ui.router', 'ngGrid'])
   .config(function ($stateProvider, $urlRouterProvider) {
 
 

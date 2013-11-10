@@ -35,10 +35,6 @@ angular.module('websiteApp')
           });
         }
 
-        scope.$watch('isCollapsed', function (value) {
-          console.log('isCollapsed', value);
-        });
-
         if (youTubeService.ready) {
           createPlayer();
         } else {

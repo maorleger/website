@@ -7,7 +7,7 @@ angular.module('websiteApp')
       'AngularJS',
       'Karma'
     ];
-    $scope.isCollapsed = false;
+    $scope.navCollapsed = false;
 
     $scope.save = function () {
       $scope.loaded = true;

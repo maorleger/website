@@ -1,0 +1,27 @@
+.contactMe {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.contactMe .head {
+    font-size: 3em;
+    font-weight: 100;
+    margin: 40px 0;
+}
+
+/* Fix up the ng-grid until an update version sorts out the issues */
+.ngViewport.ng-scope {
+    height: auto !important;
+    overflow-y: hidden;
+}
+
+.ngTopPanel.ng-scope, .ngHeaderContainer {
+    width: auto !important;
+}
+
+/* END ng-grid fix */
+
+.ngCellText {
+    white-space: normal;
+    word-wrap: normal;
+}
