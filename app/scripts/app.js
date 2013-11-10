@@ -1,28 +1,45 @@
 'use strict';
 
-var app = angular.module('websiteApp', ['ui.bootstrap', 'websiteApp.directives', 'websiteApp.controllers', 'websiteApp.services'])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
+var app = angular.module('websiteApp', ['ui.bootstrap', 'ui.router'])
+  .config(function ($stateProvider, $urlRouterProvider) {
+
+
+    $urlRouterProvider.otherwise('/');
+
+    $stateProvider
+      .state('main', {
+        url: '/',
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        activetab: ''
+        controller: 'MainCtrl'
       })
-      .when('/About', {
+      .state('about', {
+        url: '/about',
         templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        activetab: 'About'
+        controller: 'MainCtrl'
       })
-      .when('/Schutzhund', {
+      .state('resume', {
+        url: '/resume',
+        templateUrl: 'views/resume.html',
+        controller: 'ResumeCtrl'
+      })
+      .state('schutzhund', {
+        url: '/schutzhund',
         templateUrl: 'views/schutzhund.html',
-        controller: 'SchutzhundCtrl',
-        activetab: 'Schutzhund'
+        controller: 'SchutzhundCtrl'
       })
-      .otherwise({
-        redirectTo: '/'
+      .state('schutzhund.pics', {
+        url: '/schutzhund/pics',
+        templateUrl: 'views/schutzhund-pics.html',
+        controller: 'SchutzhundpicsCtrl'
+      })
+      .state('schutzhund.videos', {
+        url: '/schutzhund/videos',
+        templateUrl: 'views/schutzhund-vids.html',
+        controller: 'YouTubeselectorCtrl'
       });
-  }).run(['$rootScope', '$http', '$browser', '$timeout', "$route", function ($scope, $http, $browser, $timeout, $route) {
-    $scope.$on("$routeChangeSuccess", function (scope, next, current) {
+
+  }).run(['$rootScope', '$http', '$browser', '$timeout', '$route', function ($scope, $http, $browser, $timeout, $route) {
+    $scope.$on('$routeChangeSuccess', function (scope, next, current) {
       $scope.part = $route.current.activetab;
     });
 
@@ -32,9 +49,8 @@ var app = angular.module('websiteApp', ['ui.bootstrap', 'websiteApp.directives',
 
     $scope.closeForm = function () {
       $('.contactRow').slideUp();
-    }
+    };
   }]);
 
-app.config(['$locationProvider', function ($location) {
-  $location.hashPrefix('!');
-}]);
+
+angular.module('websiteApp').value('$anchorScroll', angular.noop);

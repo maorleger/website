@@ -1,12 +1,12 @@
 'use strict';
 
-angular.module('websiteApp.directives', [])
+angular.module('websiteApp')
   .directive('youtube', ['youTubeService', function (youTubeService) {
     return {
-      restrict: "EA",
+      restrict: 'EA',
       scope: {
-        code: "@",
-        active: "@"
+        code: '@',
+        active: '@'
       },
       template: '<div id="{{code}}"><iframe width="420" height="315" src="http://www.youtube.com/embed/{{code}}?enablejsapi=1" frameborder="0" allowfullscreen></iframe> </div>',
       link: function (scope, element, attrs) {
@@ -14,7 +14,6 @@ angular.module('websiteApp.directives', [])
         var playerReady = false;
         var playerState = 0;
         var callback;
-
 
         function createPlayer() {
           player = new YT.Player(attrs.code, {
@@ -36,6 +35,10 @@ angular.module('websiteApp.directives', [])
           });
         }
 
+        scope.$watch('isCollapsed', function (value) {
+          console.log('isCollapsed', value);
+        });
+
         if (youTubeService.ready) {
           createPlayer();
         } else {
@@ -45,36 +48,20 @@ angular.module('websiteApp.directives', [])
         }
 
 
-        scope.$watch("active", function (value) {
-          if (youTubeService.ready) {
-            console.log(playerState);
-            if (value == "true") {
-              if (playerReady && (playerState == YT.PlayerState.PAUSED)) {
+        scope.$watch('active', function (value) {
+          if (youTubeService.ready && playerReady) {
+            if (value == 'true') {
+              if (playerState == YT.PlayerState.PAUSED) {
+                // I only want to resume videos that have started playing and have been paused
                 player.playVideo();
               }
             } else {
-
-              if (playerReady && (playerState == YT.PlayerState.BUFFERING || playerState == YT.PlayerState.PLAYING)) {
-                player.pauseVideo();
-              }
+              player.pauseVideo();
             }
 
           }
 
         });
       }
-    }
-  }])
-  .directive("header", function () {
-    return {
-      restrict: "E",
-      templateUrl: "templates/navbar.html"
-    }
-  })
-  .directive("contactme", function () {
-    return {
-      restrict: "E",
-      templateUrl: "templates/contact.html"
-    }
-  });
-
+    };
+  }]);

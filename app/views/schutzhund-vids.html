@@ -1,0 +1,11 @@
+<div class="row" ng-controller="YouTubeselectorCtrl">
+  <div class="span12">
+    <tabset>
+      <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+        <h4>{{tab.content}}</h4>
+        <youtube code="{{tab.code}}" active="{{tab.active}}"></youtube>
+      </tab>
+    </tabset>
+  </div>
+</div>
+
