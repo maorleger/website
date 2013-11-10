@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('websiteApp')
-  .controller('NavbarCtrl', ['$scope', "$http", function ($scope, $http) {
+  .controller('NavbarCtrl', ['$scope', '$http', function ($scope, $http) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

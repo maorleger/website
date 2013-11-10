@@ -1,19 +1,20 @@
 'use strict';
 
-describe('Controller: MainCtrl', function () {
+describe('Controller: GridCtrl', function () {
 
   // load the controller's module
   beforeEach(module('websiteApp'));
 
-  var MainCtrl,
+  var GridCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    MainCtrl = $controller('MainCtrl', {
+    GridCtrl = $controller('GridCtrl', {
       $scope: scope
     });
   }));
+
 
 });

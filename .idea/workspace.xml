@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3ccf3fa-0958-4133-b965-23ca01692739" name="Default" comment="Change buttons to regular non-blue buttons in schuzhund.&#10;Make sure we use the Dropbox public link URL.&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
+    <list default="true" id="f3ccf3fa-0958-4133-b965-23ca01692739" name="Default" comment="Added stuff to the homepage and created a nice abstraction over ng-grid">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/controllers/Grid.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/spec/controllers/Grid.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/services/dataSets.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/spec/services/dataSets.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/ng-grid.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/directives/ngGrid.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/spec/directives/ngGrid.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/spec/controllers/About.js" afterPath="$PROJECT_DIR$/test/spec/controllers/About.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/spec/controllers/Resume.js" afterPath="$PROJECT_DIR$/test/spec/controllers/Resume.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/spec/controllers/Schutzhund.js" afterPath="$PROJECT_DIR$/test/spec/controllers/Schutzhund.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/spec/controllers/SchutzhundPics.js" afterPath="$PROJECT_DIR$/test/spec/controllers/SchutzhundPics.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/spec/controllers/YouTubeSelector.js" afterPath="$PROJECT_DIR$/test/spec/controllers/YouTubeSelector.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/main.css" afterPath="$PROJECT_DIR$/app/styles/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main.html" afterPath="$PROJECT_DIR$/app/views/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/navbar.html" afterPath="$PROJECT_DIR$/app/templates/navbar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/spec/controllers/main.js" afterPath="$PROJECT_DIR$/test/spec/controllers/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/navbar.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/navbar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/schutzhund.html" afterPath="$PROJECT_DIR$/app/views/schutzhund.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/spec/controllers/navbar.js" afterPath="$PROJECT_DIR$/test/spec/controllers/navbar.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/directives/youtube.js" afterPath="$PROJECT_DIR$/app/scripts/directives/youtube.js" />
     </list>
     <ignored path="website.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,104 +40,7 @@
     <favorites_list name="website" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="42" selection-start="711" selection-end="711" vertical-scroll-proportion="42.125" vertical-offset="1266" max-vertical-offset="1845">
-              <folding>
-                <marker date="1384111483000" expanded="true" signature="1578:1729" placeholder="..." />
-                <marker date="1384111483000" expanded="true" signature="1671:1697" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/styles/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="1" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/main.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="19" selection-start="259" selection-end="259" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="480">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ui-bootstrap-tpls.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/bower_components/angular-bootstrap/ui-bootstrap-tpls.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="5" selection-start="2464" selection-end="2464" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="53685">
-              <folding>
-                <marker date="1378660130000" expanded="false" signature="112104:112115" placeholder="..." />
-                <marker date="1378660130000" expanded="false" signature="112817:112830" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Grid.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/Grid.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="6" selection-start="893" selection-end="893" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ngGrid.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/directives/ngGrid.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="126" selection-start="198" selection-end="207" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="youtube.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/directives/youtube.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="19" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1035">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dataSets.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/services/dataSets.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="9" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="30" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="youTubeService.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/scripts/services/youTubeService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="603">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -149,22 +59,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/resume.html" />
+        <option value="$PROJECT_DIR$/test/spec/controllers/Grid.js" />
+        <option value="$PROJECT_DIR$/test/spec/controllers/main.js" />
+        <option value="$PROJECT_DIR$/test/spec/controllers/navbar.js" />
+        <option value="$PROJECT_DIR$/test/spec/controllers/Resume.js" />
+        <option value="$PROJECT_DIR$/test/spec/controllers/Schutzhund.js" />
+        <option value="$PROJECT_DIR$/test/spec/controllers/SchutzhundPics.js" />
+        <option value="$PROJECT_DIR$/test/spec/controllers/YouTubeSelector.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/navbar.js" />
-        <option value="$PROJECT_DIR$/app/templates/navbar.html" />
-        <option value="$PROJECT_DIR$/app/views/schutzhund.html" />
-        <option value="$PROJECT_DIR$/app/scripts/directives/youtube.js" />
-        <option value="$PROJECT_DIR$/app/scripts/app.js" />
-        <option value="/HTML Fragment (dataSets.js:326).html" />
-        <option value="/HTML Fragment (Grid.js:383).html" />
-        <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="/HTML Fragment (Grid.js:636).html" />
-        <option value="/HTML Fragment (ngGrid.js:110).html" />
+        <option value="$PROJECT_DIR$/app/scripts/directives/pdf.js" />
         <option value="$PROJECT_DIR$/app/scripts/directives/ngGrid.js" />
-        <option value="$PROJECT_DIR$/app/styles/main.css" />
+        <option value="$PROJECT_DIR$/dist/styles/4834176f.main.css" />
+        <option value="$PROJECT_DIR$/dist/index.html" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/Grid.js" />
-        <option value="$PROJECT_DIR$/app/views/main.html" />
-        <option value="$PROJECT_DIR$/app/scripts/services/dataSets.js" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/dist/styles/a5f1ff0b.main.css" />
       </list>
     </option>
   </component>
@@ -264,24 +174,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="styles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -300,7 +192,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -319,10 +211,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -345,24 +233,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="directives" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -399,6 +269,9 @@
     </servers>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/styles" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/static" />
       <recent name="$PROJECT_DIR$/app/images" />
@@ -468,10 +341,10 @@
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
   <component name="TaskManager">
-    <task id="Default" summary="Default task">
+    <task active="true" id="Default" summary="Default task">
       <changelist id="f3ccf3fa-0958-4133-b965-23ca01692739" name="Default" comment="" />
       <created>1381694779931</created>
-      <updated>1384099011306</updated>
+      <updated>1384127800805</updated>
     </task>
     <task id="LOCAL-00001" summary="Adding zurb foundation to the site and getting setup here...">
       <created>1381695856691</created>
@@ -503,12 +376,16 @@
       <option name="issue" value="true" />
       <updated>1384105384731</updated>
     </task>
-    <task active="true" id="527fc5989231ed595700c415" summary="Main page">
+    <task id="527fc5989231ed595700c415" summary="Main page">
       <created>1384112842600</created>
       <option name="issue" value="true" />
-      <updated>1384105391033</updated>
+      <updated>1384127800586</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added stuff to the homepage and created a nice abstraction over ng-grid">
+      <created>1384125238662</created>
+      <updated>1384125238662</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <option name="clearContext" value="false" />
     <option name="createChangelist" value="false" />
     <option name="createBranch" value="false" />
@@ -559,8 +436,8 @@
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32415903" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2884927" sideWeight="0.6712538" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32415903" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2884927" sideWeight="0.675841" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39786586" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -568,7 +445,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22447325" sideWeight="0.5474006" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22447325" sideWeight="0.45259938" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22447325" sideWeight="0.675841" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -614,133 +491,130 @@
     <MESSAGE value="Added youtube functionality using angular Tabs directive and my own youtube directive" />
     <MESSAGE value="Change #1: used yeoman's built in generators for my directives/controllers/services/etc.&#10;Change #2: Added a few images of Einstein&#10;Change #3: Added a resume section with a link to the PDF. TODO: make sure we use some dropbox public link for this pdf so that it auto refreshes without having to manage the site&#10;Change #4: Added youtube section" />
     <MESSAGE value="Change buttons to regular non-blue buttons in schuzhund.&#10;Make sure we use the Dropbox public link URL.&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change buttons to regular non-blue buttons in schuzhund.&#10;Make sure we use the Dropbox public link URL.&#10;" />
+    <MESSAGE value="Added stuff to the homepage and created a nice abstraction over ng-grid" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added stuff to the homepage and created a nice abstraction over ng-grid" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/navbar.js">
+    <entry file="file://$PROJECT_DIR$/dist/bower_components/angular-grid/ng-grid.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="31" selection-start="241" selection-end="246" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="495">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/schutzhund.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="31" selection-start="928" selection-end="928" vertical-scroll-proportion="0.84615386" vertical-offset="0" max-vertical-offset="585">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bower_components/angular/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bower_components/angular/angular.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10695" column="10" selection-start="347873" selection-end="347873" vertical-scroll-proportion="8.566085" vertical-offset="156990" max-vertical-offset="227445">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bower_components/angular-ui-router/Gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="39" selection-start="629" selection-end="629" vertical-scroll-proportion="0.6569343" vertical-offset="0" max-vertical-offset="2880">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="262">
           <folding>
-            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#2079#2486#2" expanded="true" />
+            <element signature="e#2607#3010#2" expanded="true" />
+            <element signature="e#3806#4113#2" expanded="true" />
+            <element signature="e#4236#4555#2" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/navbar.html">
+    <entry file="file://$PROJECT_DIR$/app/bower_components/angular-grid/ng-grid.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="7" selection-start="94" selection-end="94" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="870">
-          <folding>
-            <marker date="1384105792000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1384105792000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1384105792000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bower_components/angular-bootstrap/ui-bootstrap-tpls.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="5" selection-start="2464" selection-end="2464" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="53685">
-          <folding>
-            <marker date="1378660130000" expanded="false" signature="112104:112115" placeholder="..." />
-            <marker date="1378660130000" expanded="false" signature="112817:112830" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="1" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/Grid.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="6" selection-start="893" selection-end="893" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="19" selection-start="259" selection-end="259" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="480">
+        <state line="8" column="18" selection-start="137" selection-end="137" vertical-scroll-proportion="0.45801526" vertical-offset="0" max-vertical-offset="6705">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="42" selection-start="711" selection-end="711" vertical-scroll-proportion="42.125" vertical-offset="1266" max-vertical-offset="1845">
+        <state line="69" column="0" selection-start="2191" selection-end="2227" vertical-scroll-proportion="-43.125" vertical-offset="0" max-vertical-offset="1845">
           <folding>
-            <marker date="1384111483000" expanded="true" signature="1578:1729" placeholder="..." />
-            <marker date="1384111483000" expanded="true" signature="1671:1697" placeholder="..." />
+            <marker date="1384127377000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1384127377000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/services/dataSets.js">
+    <entry file="file://$PROJECT_DIR$/dist/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="9" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
+        <state line="4" column="40" selection-start="144" selection-end="144" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="1155">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/directives/youtube.js">
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="19" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1035">
+        <state line="267" column="38" selection-start="6526" selection-end="6526" vertical-scroll-proportion="69.30769" vertical-offset="5807" max-vertical-offset="5985">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/ng-grid.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="7" selection-start="1" selection-end="7" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6705">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/styles/a5f1ff0b.main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="45" selection-start="145" selection-end="145" vertical-scroll-proportion="0.18703242" vertical-offset="0" max-vertical-offset="401">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/Grid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="53" selection-start="347" selection-end="347" vertical-scroll-proportion="0.2244389" vertical-offset="0" max-vertical-offset="401">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/SchutzhundPics.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="47" selection-start="439" selection-end="439" vertical-scroll-proportion="0.15873016" vertical-offset="120" max-vertical-offset="570">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/navbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="45" selection-start="89" selection-end="89" vertical-scroll-proportion="0.10869565" vertical-offset="0" max-vertical-offset="495">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/directives/ngGrid.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="126" selection-start="198" selection-end="207" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+        <state line="4" column="39" selection-start="120" selection-end="120" vertical-scroll-proportion="0.14962594" vertical-offset="0" max-vertical-offset="401">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+    <entry file="file://$PROJECT_DIR$/.jshintrc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="30" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.040871933" vertical-offset="15" max-vertical-offset="465">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/services/youTubeService.js">
+    <entry file="file://$PROJECT_DIR$/app/views/resume.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="388">
+        <state line="2" column="6" selection-start="142" selection-end="142" vertical-scroll-proportion="0.0795756" vertical-offset="0" max-vertical-offset="377">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/directives/pdf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="19" selection-start="385" selection-end="385" vertical-scroll-proportion="0.26184538" vertical-offset="0" max-vertical-offset="401">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/directives/youtube.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="46" selection-start="403" selection-end="437" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1035">
           <folding />
         </state>
       </provider>
