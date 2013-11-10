@@ -28,12 +28,12 @@ var app = angular.module('websiteApp', ['ui.bootstrap', 'ui.router'])
         controller: 'SchutzhundCtrl'
       })
       .state('schutzhund.pics', {
-        url: '/schutzhund/pics',
+        url: '',
         templateUrl: 'views/schutzhund-pics.html',
         controller: 'SchutzhundpicsCtrl'
       })
       .state('schutzhund.videos', {
-        url: '/schutzhund/videos',
+        url: '',
         templateUrl: 'views/schutzhund-vids.html',
         controller: 'YouTubeselectorCtrl'
       });
